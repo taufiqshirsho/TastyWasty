@@ -22,3 +22,5 @@ class ExampleInstrumentedTest {
         assertEquals("com.example.", appContext.packageName)
     }
 }
+
+// testing environment setup

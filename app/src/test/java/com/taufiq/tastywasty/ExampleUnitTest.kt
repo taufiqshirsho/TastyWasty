@@ -1,4 +1,4 @@
-package com.taufiq.tastywastyapp
+package com.taufiq.tastywasty
 
 import org.junit.Test
 
