@@ -60,7 +60,7 @@ fun SignupScreen(
             )
 
             Text(
-                //text = "Sign Up",
+                text = "Sign Up",
                 style = MaterialTheme.typography.headlineMedium,
                 modifier = Modifier.padding(bottom = 16.dp)
             )
