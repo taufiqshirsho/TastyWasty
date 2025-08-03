@@ -10,7 +10,7 @@ import com.taufiq.tastywasty.data.model.Recipe
 import kotlinx.coroutines.flow.Flow
 
 @Dao
-interface RecipeDao {
+//interface RecipeDao {
     @Query("SELECT * FROM recipes")
     fun getAll(): Flow<List<Recipe>>
 

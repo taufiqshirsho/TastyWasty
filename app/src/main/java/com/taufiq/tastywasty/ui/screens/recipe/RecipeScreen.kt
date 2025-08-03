@@ -316,7 +316,7 @@ fun AddRecipeDialog(
             }
         },
         confirmButton = {
-            //Button(
+            Button(
                 onClick = {
                     val ingredients = ingredientsText
                         .split(",")
