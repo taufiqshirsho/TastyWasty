@@ -28,7 +28,8 @@ fun MainScreen(
     foodViewModel: FoodViewModel,
     recipeViewModel: RecipeViewModel,
     shoppingViewModel: ShoppingViewModel,
-    authViewModel: AuthViewModel
+    authViewModel: AuthViewModel,
+    onLogout: () -> Unit
 
 ) {
     val navController = rememberNavController()
@@ -59,7 +60,8 @@ fun MainScreen(
 
             composable(BottomNavItem.Settings.route) {
                 SettingsScreen(
-                    authViewModel = authViewModel
+                    authViewModel = authViewModel,
+                    onLogout = onLogout
                 )
             }
 

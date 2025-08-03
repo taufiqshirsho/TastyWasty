@@ -1,5 +1,6 @@
 package com.taufiq.tastywasty.ui.screens.recipe
 
+import android.widget.Toast
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -7,11 +8,13 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Edit
+import androidx.compose.material.icons.filled.Restaurant
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
@@ -21,6 +24,8 @@ import com.taufiq.tastywasty.viewModel.FoodViewModel
 import com.taufiq.tastywasty.viewModel.RecipeViewModel
 import com.taufiq.tastywasty.viewModel.ShoppingViewModel
 import kotlinx.coroutines.delay
+
+
 
 @Composable
 fun RecipeScreen(
@@ -38,6 +43,7 @@ fun RecipeScreen(
     var showSuccessAlert by remember { mutableStateOf(false) }
 
     val recipesToShow = if (showAll) allRecipes else matchedRecipes
+    val context = LocalContext.current
 
     // Dismiss success alert after 2 seconds
     if (showSuccessAlert) {
@@ -49,15 +55,31 @@ fun RecipeScreen(
 
     Scaffold(
         floatingActionButton = {
-            FloatingActionButton(
-                onClick = {
-                    recipeToEdit = null
-                    showDialog = true
-                },
-                containerColor = MaterialTheme.colorScheme.primary,
-                contentColor = Color.White
-            ) {
-                Icon(Icons.Default.Add, contentDescription = "Add Recipe")
+            Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
+                FloatingActionButton(
+                    onClick = {
+                        Toast.makeText(
+                            context,
+                            "Under maintenance",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    },
+                    containerColor = MaterialTheme.colorScheme.secondary,
+                    contentColor = Color.White
+                ) {
+                    Icon(Icons.Default.Restaurant, contentDescription = "Under Maintenance")
+                }
+
+                FloatingActionButton(
+                    onClick = {
+                        recipeToEdit = null
+                        showDialog = true
+                    },
+                    containerColor = MaterialTheme.colorScheme.primary,
+                    contentColor = Color.White
+                ) {
+                    Icon(Icons.Default.Add, contentDescription = "Add Recipe")
+                }
             }
         }
     ) { padding ->

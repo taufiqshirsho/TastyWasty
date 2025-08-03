@@ -17,7 +17,7 @@ import androidx.compose.ui.unit.dp
 import com.taufiq.tastywasty.viewmodel.AuthViewModel
 
 @Composable
-fun SettingsScreen(authViewModel: AuthViewModel) {
+fun SettingsScreen(authViewModel: AuthViewModel, onLogout: () -> Unit) {
     var currentPassword by remember { mutableStateOf("") }
     var newPassword by remember { mutableStateOf("") }
     var confirmPassword by remember { mutableStateOf("") }
@@ -135,6 +135,21 @@ fun SettingsScreen(authViewModel: AuthViewModel) {
                 }
             }
         }
+
+        Button(
+            onClick = {
+                authViewModel.logout()
+                onLogout()
+            },
+            modifier = Modifier.fillMaxWidth(),
+            colors = ButtonDefaults.buttonColors(
+                containerColor = MaterialTheme.colorScheme.error,
+                contentColor = Color.White
+            )
+        ) {
+            Text("Logout")
+        }
+
 
         // Additional settings sections can be added here
     }

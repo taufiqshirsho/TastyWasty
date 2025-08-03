@@ -79,7 +79,12 @@ class MainActivity : ComponentActivity() {
                             foodViewModel = foodViewModel,
                             recipeViewModel = recipeViewModel,
                             shoppingViewModel = shoppingViewModel,
-                            authViewModel=authViewModel
+                            authViewModel=authViewModel,
+                            onLogout = {
+                                navController.navigate("login") {
+                                    popUpTo("main") { inclusive = true }
+                                }
+                            }
 
                         )
                     }
