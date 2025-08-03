@@ -11,7 +11,7 @@ import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface ShoppingDao {
-    //@Insert
+    @Insert
     suspend fun insertList(list: ShoppingList)
 
     @Update
