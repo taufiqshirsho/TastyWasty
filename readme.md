@@ -21,8 +21,10 @@ them to share and manage leftover food efficiently.
 ## Testing
 
 The app includes:
-- `ExampleUnitTest.kt`: Unit tests for logic.
-- `ExampleInstrumentedTest.kt`: Device-based UI/integration tests.
+- `AddFoodItemTest.kt`: Android Test for adding food items.
+- `AddRecipeDialogueTest.kt`: Adding recipe in the database and working principle testing.
+- `BasicInstumentedTesting.kt`: Checking some basic functionality works or not.
+- `ExampleUnitTest` : Some basic logic checking.
 
 Tests are located in:
 - `app/src/test/java/...`
