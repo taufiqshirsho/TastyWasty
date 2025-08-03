@@ -54,7 +54,7 @@ fun InventoryScreen(viewModel: FoodViewModel) {
         ) {
             // Expiring Soon Section (always visible)
             if (expiringSoon.isNotEmpty()) {
-                Column(modifier = Modifier.padding(horizontal = 16.dp)) {
+                //Column(modifier = Modifier.padding(horizontal = 16.dp)) {
                     Text(
                         text = "Expiring Soon",
                         style = MaterialTheme.typography.titleLarge.copy(
