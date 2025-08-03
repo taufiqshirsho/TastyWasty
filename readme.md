@@ -7,13 +7,14 @@ them to share and manage leftover food efficiently.
 
 ## Core Features
 
-- **User Authentication**: Sign up and log in with email and password.
-- **Home Screen**: Browse available food items posted by others.
-- **Add Food**: Add your own food items with name, description, image, and expiry date.
-- **My Contributions**: View, edit, or delete your shared items.
+- **User Authentication**: Sign up and log in with email or username and password.
+- **Home Screen**: Browse available food items and shopping list. Also expired food items. Get suggestion for recipes and check items which is expiring today.
+- **Inventory**: Add your own food items with name, category, expiry date, quantity and location.
 - **Jetpack Navigation**: Smooth navigation between screens.
 - **MVVM Architecture**: Clean and maintainable code structure using ViewModels and repositories.
-- **Room Database**: Local storage of food data using Room and DAO interfaces.
+- **Database**: Keep tract of users, foods, shopping list, recipes and much more.
+- **Settings**: Update or change password and logout from your account easily from the settings menu
+- **Recipe Suggestion**: It will automatically suggest recipes based on inventory. This feature is still under maintenance.
 
 ---
 
@@ -33,6 +34,7 @@ Tests are located in:
 
 Component              Version          
 ---------------------------------------
+Android Studio Ladybug| 2024.2.1 Patch 2
 Android Gradle Plugin | 8.7.2           
 Kotlin                | 2.0.21          
 Jetpack Compose       | 2024.09.00 (BOM) 

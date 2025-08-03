@@ -23,13 +23,7 @@ class ExampleInstrumentedTest {
         assertEquals("com.taufiq.tastywasty", appContext.packageName)
     }
 
-    // Test 2: Check that "Email" input field is visible
-    @Test
-    fun emailFieldIsVisible() {
-        composeTestRule.onNodeWithText("Email").assertIsDisplayed()
-    }
-
-    // Test 3: Check that the Sign Up link is visible
+    // Test 2: Check that the Sign Up link is visible
     @Test
     fun signUpLinkIsVisible() {
         composeTestRule.onNodeWithText("Don't have an account? Sign up").assertIsDisplayed()
