@@ -46,7 +46,7 @@ fun RecipeScreen(
     val context = LocalContext.current
 
     // Dismiss success alert after 2 seconds
-    //if (showSuccessAlert) {
+    if (showSuccessAlert) {
         LaunchedEffect(Unit) {
             delay(2000)
             showSuccessAlert = false
